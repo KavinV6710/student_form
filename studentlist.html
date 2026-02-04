@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="studentlist.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
+</head>
+<body>
+    <div class="studentportal">
+    <div class="header">
+        <h1 class="heading container">Student Portal</h1>
+        <div class="pagechangerbtns container">
+            <a href="Studentform.html" class="btn-changepage" style="color: white;">Add student</a>
+            <a href="studentlist.html" class="btn-changepage" style="color: white;">Student List</a>
+        </div>
+    </div>
+    <div class="student-list container">
+        <div class="list-heading">
+            <div class="listheading-left">
+                <h1 style="color: white; margin:  0 10px 10px 10px;" class="heading-list">Student List</h1>
+                <p style="color: gray;margin: 10px;" class="heading-para1">Manage and view all registered students</p>
+                <p style="color: gray;margin: 0 0 10px 10px;" class="heading-para2">Manage registered students</p>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="🔍︎Search students... ">
+            </div>
+        </div>
+        <table class="table">
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>COURSE</th>
+                <th>DATEOFBIRTH</th>
+                <th>GENDER</th>
+                <th>ACTIONS</th>
+            </tr>
+        </table>
+        <div class="studentdetailscard">
+        </div>
+    </div>
+    <div class="student-list-bottom container">
+        <div class="student-list-bottom-left">
+            <p style="color: gray;font-size: small;">Showing 1-5 of 847 students</p>
+        </div>
+        <div style="display: flex; margin: 0 15px;color: gray;">
+            <button class="pagechangebtn">Prev</button>
+            <p class="pagenumbers">1</p>
+            <button class="pagechangebtn">next</button>
+        </div>
+    </div>
+    </div>
+    <script src="studentlist.js"></script>
+</body>
+</html>

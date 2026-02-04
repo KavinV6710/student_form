@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: Manrope;
+}
+
+body{
+    background: linear-gradient(#0F172A,#1E293B);
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.studentportal{
+    margin: 20px 0;
+}
+.header{
+    padding: 15px 0;
+}
+.heading{
+    color: #FFFFFF;
+}
+.pagechangerbtns{
+    padding: 10px 0;
+}
+.btn-changepage{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #0F172A;
+    color: #FFFFFF;
+    width: 315px;
+    height: 40px;
+    border: 1.5px solid #06B6D4;
+}
+.btn-changepage:hover{
+    background: linear-gradient(#06B6D4,#6366F1)
+}
+.list-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.student-list{
+    background-color: #1E293BE5;
+    padding: 10px;
+    border-radius: 5px;
+    border-top: 2px solid #03befb;
+}
+.search input[type="search"]{
+    padding: 10px 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+th{
+    color: gray;
+    font-size: small;
+    text-align: center;
+    padding: 10px;
+    background-color: #0F172A;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+tr th:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+tr th:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.student-list-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.pagechangebtn{
+    padding: 2px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: gray;
+}
+.pagenumbers{
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1000px) and (max-width:1200px) { 
+    .heading-para2{
+        display: none;
+    }
+}
+@media (min-width: 800px) and (max-width:1000px) { 
+    .btn-changepage{
+            width: 290px;
+            font-size: medium;
+    }
+    .heading{
+        font-size: xx-large;
+    }
+    .heading-para2{
+        display: none;
+    }
+}
+@media (min-width: 650px) and (max-width:800px) { 
+    .btn-changepage{
+            width: 240px;
+            font-size: small;
+    }
+    .heading{
+        font-size:x-large;
+    }
+    .heading-para2{
+        display: none;
+    }
+}
+@media (min-width: 375px) and (max-width:650px) { 
+    .pagechangerbtns{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    .btn-changepage{
+        width: 170px;
+        font-size: smaller;
+    }
+    .heading{
+        font-size: larger;
+    }
+    .listheading-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .heading-list{
+        font-size: larger;
+    }
+    .heading-para1{
+        display: none;
+    }
+    .heading-para2{
+        font-size: smaller;
+    }
+    .list-heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+    }
+    .search input[type="search"] {
+        width: 295px;
+    }
+    .table{
+        display: none;
+    }
+    .noofstudents{
+        font-size: smaller;
+    }
+    .student-list-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .pagechangebtn{
+        font-size: xx-small;
+        padding: 5px;
+    }
+    .studentcard{
+        margin: 10px 0;
+        background-color: #0F172A;
+        padding: 10px;
+        border-radius: 10px;
+        gap: 10px;
+    }
+    .studentcard-top{
+        display: flex;
+        gap: 5px;
+    }
+    .name{
+        color: #FFFFFF;
+    }
+    .genderdob{
+        display: flex;
+        color: gray;
+        font-size: small;
+    }
+    .letter{
+        background-color: #03befb;
+        border-radius: 90px;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        padding: 3px;
+        color: #FFFFFF;
+        font-size: medium;
+    }
+    .studentcard-bottom{
+        color: gray;
+        font-size: small;
+        margin: 3px 15px;
+    }
+    .editdel-btn{
+        display: flex;
+        justify-content: end;
+        gap: 5px;
+    }
+    .btnedit{
+        padding: 0 5px;
+        border:1px solid #F59E0B;
+        border-radius: 3px;
+        background-color: #F59E0B26;
+    }
+    .btndel{
+        padding: 1px 8px;
+        border:1px solid #EF4444;
+        border-radius: 3px;
+        background-color: #EF444426;
+    }
+}

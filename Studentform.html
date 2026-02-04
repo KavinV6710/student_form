@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="Studentform.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
+</head>
+<body>
+    <div class="studentportal">
+    <div class="header">
+        <h1 class="heading container">Student Portal</h1>
+        <div class="pagechangerbtns container">
+            <a href="Studentform.html" class="btn-changepage" style="color: white;">Add student</a>
+            <a href="studentlist.html" class="btn-changepage" style="color: white;">Student List</a>
+        </div>
+    </div>
+    <div class="container studentform">
+        <div class="form">
+            <h2 style="color: #ffffff;" class="form-heading">Student Entry Form </h2>
+            <p style="color: gray;font-size: smaller;margin: 10px 0;">Fill in the details to register a new student </p>
+            <form action="" id="studentdetails">
+                <label for="Name">NAME</label><br>
+                    <input type="text" id="name" placeholder="Enter Student name" required><br>
+                <label for="Email">EMAIL</label><br>
+                    <input type="email" id="email" placeholder="student@example.com" required><br>
+                <label for="course">COURSE</label><br>
+                <select name="course" id="course">
+                    <option value="">Enter the course</option>
+                    <option value="Computer science">Computer science</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Literature">Literature</option>
+                </select><br>
+                <label for="date">DATE OF BIRTH</label><br>
+                <input type="date" placeholder="DD/MM/YYYY" name="" id="dob" required><br>
+                <label for="gender" id="gender" >GENDER</label><br>
+                <label><input type="radio" name="gender" value="Male" style="width: 5%;">Male</label>
+                <label><input type="radio" name="gender" value="Female" style="width: 5%">Female</label>
+            </form>
+            <div class="sumbitandclear">
+                <button class="form-submit submit-clear-btn" id="addstudent" type="button">ADD STUDENT</button>
+                <button class="form-clear submit-clear-btn" id="form-clear" type="button">CLEAR FORM</button>
+            </div>
+        </div>
+        <div class="form-overall">
+            <div class="systemonline">
+                <h3>System Online</h3>
+                <p style="font-size: smaller;color: #64748b;">Ready to accept student data</p>
+            </div>
+            <div class="studentcourse">
+                <div class="students">
+                    <p style="font-size: 10px;color: #64748b;">TOTAL STUDENTS</p>
+                    <h3>847</h3>
+                    <p style="font-size: 9px;color: green;">↑ 12% this month </p>
+                </div>
+                <div class="cousre">
+                    <p style="font-size: 10px;color: #64748b;">ACTIVE COURSES</p>
+                    <h3>24</h3>
+                    <p style="font-size: 9px;color: aqua;">6 departments</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="studentform.js"></script>
+</body>
+</html>
