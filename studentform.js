@@ -5,10 +5,10 @@ document.getElementById("addstudent").addEventListener("click", function() {
     const dob = document.getElementById("dob").value;
     const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
-    if (!name || !email || !course || !dob || !gender) {
-        alert("Please fill in all fields!");
-        return;
-    }
+    // if (!name || !email || !course || !dob || !gender) {
+    //     alert("Please fill in all fields!");
+    //     return;
+    // }
 
     const student = { name, email, course, dob, gender };
 
