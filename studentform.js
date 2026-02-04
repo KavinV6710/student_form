@@ -20,3 +20,6 @@ document.getElementById("addstudent").addEventListener("click", function() {
     window.location.href = "studentlist.html";
     document.getElementById("studentdetails").reset();
 });
+
+
+//changes 
