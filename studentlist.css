@@ -64,10 +64,24 @@ th{
     text-align: center;
     padding: 10px;
     background-color: #0F172A;
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 8px 0; 
 }
 .table{
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto;
+}
+tr{
+    color: gray;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+.name{
+    color: #FFFFFF;
 }
 tr th:first-child {
     border-top-left-radius: 5px;
@@ -81,6 +95,33 @@ tr th:last-child {
     display: flex;
     justify-content: space-between;
 }
+.btnedit
+{
+    padding: 0 5px;
+    border:1px solid #F59E0B;
+    border-radius: 3px;
+    background-color: #F59E0B26;
+}
+.btndel{
+    padding: 1px 8px;
+    border:1px solid #EF4444;
+    border-radius: 3px;
+    background-color: #EF444426;
+}
+.studentdetailscard{
+    display: none;
+}
+.letter{
+        display: inline-flex;
+        background-color: #03befb;
+        border-radius: 90px;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        font-size: medium;
+    }
 .pagechangebtn{
     padding: 2px;
     background: transparent;
@@ -120,6 +161,16 @@ tr th:last-child {
     }
     .heading-para2{
         display: none;
+    }
+    .letter{
+        background-color: #03befb;
+        border-radius: 90px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        padding: 3px;
+        color: #FFFFFF;
+        font-size: medium;
     }
 }
 @media (min-width: 375px) and (max-width:650px) { 
@@ -197,8 +248,8 @@ tr th:last-child {
         background-color: #03befb;
         border-radius: 90px;
         width: 25px;
-        text-align: center;
         height: 25px;
+        text-align: center;
         padding: 3px;
         color: #FFFFFF;
         font-size: medium;
