@@ -5,14 +5,17 @@ let students=JSON.parse(localStorage.getItem("students"))||[];
 students.forEach((student,index)=>{
     const row=document.createElement('tr')
     row.innerHTML=`
-    <td>${student.name}</td>
+    <td class="name">
+    <span class="letter">${student.name.charAt(0)}</span>
+    <span class="name">${student.name}</span>
+    </td>
     <td>${student.email}</td>
     <td>${student.course}</td>
     <td>${student.dob}</td> 
     <td>${student.gender}</td>
     <td>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="btnedit">Edit</button>
+        <button class="btndel">Delete</button>
     </td>
     `;
    document.querySelector("table").appendChild(row);
@@ -46,3 +49,9 @@ students.forEach((student)=>{
     `
    cardContainer.appendChild(card)
 })    
+document.addEventListener("click",function(e){
+    if(e.target.classList.contains("btndel")){
+        e.target.closest("tr").remove();
+    }
+})
+    
