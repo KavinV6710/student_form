@@ -5,7 +5,6 @@
     text-decoration: none;
     font-family: Manrope;
 }
-
 body{
     background: linear-gradient(#0F172A,#1E293B);
 }
@@ -57,6 +56,7 @@ body{
     background-color: transparent;
     border: 1px solid gray;
     border-radius: 5px;
+    color: white;
 }
 th{
     color: gray;
@@ -91,36 +91,39 @@ tr th:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.student-list-bottom{
+.student-list-bottom {
     display: flex;
     justify-content: space-between;
 }
-.btnedit
-{
+.btnedit {
     padding: 0 5px;
     border:1px solid #F59E0B;
     border-radius: 3px;
     background-color: #F59E0B26;
 }
-.btndel{
+.btndel {
     padding: 1px 8px;
     border:1px solid #EF4444;
     border-radius: 3px;
     background-color: #EF444426;
 }
-.studentdetailscard{
-    display: none;
+.btndelm {
+    padding: 1px 8px;
+    border:1px solid #EF4444;
+    border-radius: 3px;
+    background-color: #EF444426;
 }
-.letter{
-        display: inline-flex;
-        background-color: #03befb;
-        border-radius: 90px;
-        width: 30px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        font-size: medium;
+
+.letter {
+    display: inline-flex;
+    background-color: #03befb;
+    border-radius: 90px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: medium;
     }
 .pagechangebtn{
     padding: 2px;
@@ -132,17 +135,21 @@ tr th:last-child {
 .pagenumbers{
     display: flex;
     align-items: center;
+    margin: 0px 5px;
 }
 
-@media (min-width: 1000px) and (max-width:1200px) { 
+@media (min-width: 1000px) and (max-width:1400px) { 
     .heading-para2{
         display: none;
     }
+    .studentdetailscard{
+    display: none;
+}
 }
 @media (min-width: 800px) and (max-width:1000px) { 
     .btn-changepage{
-            width: 290px;
-            font-size: medium;
+        width: 290px;
+        font-size: medium;
     }
     .heading{
         font-size: xx-large;
@@ -150,11 +157,14 @@ tr th:last-child {
     .heading-para2{
         display: none;
     }
+    .studentdetailscard{
+    display: none;
+}
 }
 @media (min-width: 650px) and (max-width:800px) { 
     .btn-changepage{
-            width: 240px;
-            font-size: small;
+        width: 240px;
+        font-size: small;
     }
     .heading{
         font-size:x-large;
@@ -172,6 +182,9 @@ tr th:last-child {
         color: #FFFFFF;
         font-size: medium;
     }
+    .studentdetailscard{
+    display: none;
+}
 }
 @media (min-width: 375px) and (max-width:650px) { 
     .pagechangerbtns{

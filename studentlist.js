@@ -1,26 +1,28 @@
-const table=document.querySelector(".table")
+const table = document.querySelector("table");
 const cardContainer = document.querySelector(".studentdetailscard");
-let students=JSON.parse(localStorage.getItem("students"))||[];
+let students = JSON.parse(localStorage.getItem("students")) || [];
 
-students.forEach((student,index)=>{
-    const row=document.createElement('tr')
-    row.innerHTML=`
-    <td class="name">
-    <span class="letter">${student.name.charAt(0)}</span>
-    <span class="name">${student.name}</span>
-    </td>
-    <td>${student.email}</td>
-    <td>${student.course}</td>
-    <td>${student.dob}</td> 
-    <td>${student.gender}</td>
-    <td>
-        <button class="btnedit">Edit</button>
-        <button class="btndel">Delete</button>
-    </td>
+students.forEach((student, index) => {
+    const row = document.createElement("tr");
+    row.dataset.index = index;
+
+    row.innerHTML = `
+        <td>
+        <span class="letter">${student.name.charAt(0)}</span>
+        <span class="student-name">${student.name}</span>
+        </td>
+        <td>${student.email}</td>
+        <td>${student.course}</td>
+        <td>${student.dob}</td>
+        <td>${student.gender}</td>
+        <td>
+            <button class="btnedit">Edit</button>
+            <button class="btndel">Delete</button>
+        </td>
     `;
-   document.querySelector("table").appendChild(row);
-});
 
+    table.appendChild(row);
+});
 students.forEach((student)=>{
     const card=document.createElement('div')
     card.classList.add("student-card")
@@ -45,13 +47,20 @@ students.forEach((student)=>{
     <button class="btndel">Del</button>
     </div>
     </div>
-
     `
    cardContainer.appendChild(card)
 })    
-document.addEventListener("click",function(e){
-    if(e.target.classList.contains("btndel")){
-        e.target.closest("tr").remove();
+document.addEventListener("click", function (e) {
+    const row = e.target.closest("tr");
+     if (!row) return;
+    const index = row.dataset.index; 
+    if (e.target.classList.contains("btndel")) {
+        students.splice(index, 1);
+        localStorage.setItem("students", JSON.stringify(students));
+        row.remove();
     }
-})
-    
+    if (e.target.classList.contains("btnedit")) {
+        localStorage.setItem("editIndex", index);
+        window.location.href = "studentform.html";
+    }
+});
